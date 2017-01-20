@@ -15,12 +15,10 @@ hist(trees$Height, main = "Distribution of Height Variable",
      xlab = "Height (ft.)", col = "lightblue", border = "pink")
 hist(trees$Volume, main = "Distribution of Volume Variable",
      xlab = "Volume (cubic ft.)", col = "lightblue", border = "pink")
-
 # 盒鬚圖
 boxplot(trees$Girth, main = "Distridution of Trees' Grith", col = "bisque")
 boxplot(trees$Height, main = "Distridution of Trees' Hegitht", col = "bisque")
 boxplot(trees$Volume, main = "Distridution of Timbers' Volume", col = "bisque")
-
 # 長條圖
 summary(trees$Girth)
 g_group <- cut(trees$Girth, breaks = c(8, 11.5, 15.25, 21), labels = c("Small", "Medium", "Large"))
@@ -30,4 +28,4 @@ h_group <- cut(trees$Height, breaks = c(-Inf, 72, 80, Inf), labels = c("Short", 
 barplot(table(factor(h_group)), main = "Quantities of Trees' Height Level", col = "yellow", border = "orange")
 summary(trees$Volume)
 v_group <- cut(trees$Volume, breaks = c(-Inf, 19.4, 37.3, Inf), labels = c("Small", "Medium", "Large"))
-barplot(table(factor(v_group)), main = "Quantities of Timbers' Voulume", col = "yellow", border = "orange")
+barplot(table(factor(v_group)), main = "Quantities of Timbers' Volume", col = "yellow", border = "orange")
